@@ -18,7 +18,7 @@ const io = socketio(server);
 // Some stack over flow stuff very cool :)
 app.use(express.static(path.join(__dirname, 'public')));
 
-const botName = 'ChatCord Bot';
+const botName = 'Discordn\'t Bot';
 
 // Run when client connects
 io.on('connection', socket => {
@@ -28,7 +28,7 @@ io.on('connection', socket => {
     socket.join(user.room);
 
     // Welcome current user
-    socket.emit('message', formatMessage(botName, 'Welcome to ChatCord!'));
+    socket.emit('message', formatMessage(botName, 'Welcome to Discordn\'t!'));
 
     // Broadcast when a user connects
     socket.broadcast
